@@ -1,4 +1,4 @@
-# Buscacep
+# App BuscaCep
 
 Projeto desenvolvido como teste para uma vaga de desenvolvedor front end, seguindo as especificações do recrutador que são:
 

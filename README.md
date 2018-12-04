@@ -31,6 +31,8 @@ https://api.postmon.com.br/v1/cep/numerodocep.
 
 Por não ter recebido nenhum arquivo ou informações de Ui e Ux Design, foi criado um layout baseado nos conceitos do Material Design da Google com o frameword Materialize com a técnica de design in code.
 
+Layout responsivo e ajustável para versão mobile com menu toggle e ajuste de grids.
+
 **Programação**
 
 Para programar o app, foi utilizado o Angular 6 + Jquery. Com uma estrutura orientada a objetos, foram aplicadas várias técnicas e codigos específicos como Interface, Filtros, Services, Classes, entre outros.

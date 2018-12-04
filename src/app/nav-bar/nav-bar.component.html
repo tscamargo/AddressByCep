@@ -4,6 +4,7 @@
       <a href="" class="brand-logo">BuscaCep</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
+        <li (click)="changeRoute('search')"><a>Buscar Endereço</a></li>
         <li (click)="changeRoute('about')"><a>Sobre</a></li>
       </ul>
     </div>
@@ -17,7 +18,7 @@
           <span>BuscaCep</span>
         </div>
       </div>
-    <li (click)="changeRoute('search')"><a>Buscar Cep</a></li>
-    <li (click)="changeRoute('about')"><a>Sobre</a></li>
+    <li class="sidenav-close" (click)="changeRoute('search')"><a>Buscar Cep</a></li>
+    <li class="sidenav-close" (click)="changeRoute('about')"><a>Sobre</a></li>
   </ul>
 </div>

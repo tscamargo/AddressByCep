@@ -10,16 +10,14 @@ usuário utilizando Angular 4~6.X.
 **Requisitos:**
 
 Consultar um endereço somente pelo CEP;
-Ver uma lista com os últimos 10 endereços
-consultados(bairro,cidade,estado,logradouro,complemento,cep);
+
+Ver uma lista com os últimos 10 endereços consultados(bairro,cidade,estado,logradouro,complemento,cep);
+
 O input deve possuir uma mascara de CEP;
+
 O CEP de cada região deve ter uma cor de fundo diferente. Seguindo o padrão:
 
-  Norte: #A1FFAD
-  Sul: #33B7FF
-  Sudeste: #EEEEEE
-  Centro-oeste: #FFBA3D
-  Nordeste: #FFB4D5
+Norte: #A1FFAD, Sul: #33B7FF, Sudeste: #EEEEEE, Centro-oeste: #FFBA3D, Nordeste: #FFB4D5
 
 Obs.: Para obter os dados completo do endereço, você deve utilizar a API
 https://api.postmon.com.br/v1/cep/numerodocep.

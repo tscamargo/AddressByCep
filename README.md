@@ -3,10 +3,12 @@
 Projeto desenvolvido como teste para uma vaga de desenvolvedor front end, seguindo as especificações do recrutador que são:
 
 **Tarefa:**
+
 Criar uma página web que registra/lista os últimos 10 endereços consultados pelo
 usuário utilizando Angular 4~6.X.
 
 **Requisitos:**
+
 Consultar um endereço somente pelo CEP;
 Ver uma lista com os últimos 10 endereços
 consultados(bairro,cidade,estado,logradouro,complemento,cep);
@@ -26,16 +28,21 @@ https://api.postmon.com.br/v1/cep/numerodocep.
 ## SOBRE O PROJETO
 
 **Design e Layout**
+
 Por não ter recebido nenhum arquivo ou informações de Ui e Ux Design, foi criado um layout baseado nos conceitos do Material Design da Google com o frameword Materialize com a técnica de design in code.
 
 **Programação**
+
 Para programar o app, foi utilizado o Angular 6 + Jquery. Com uma estrutura orientada a objetos, foram aplicadas várias técnicas e codigos específicos como Interface, Filtros, Services, Classes, entre outros.
 
 **Comunicação JSON**
+
 Para se comunicar com a api, foi utilizada a biblioteca http do Angular com manipulação de JSON.
 
 **Histórico de Buscas**
+
 Para salvar as últimas consultas executadas, foi utilizado o Local Storange do navegador do usuário.
+
 
 ## INFORMAÇÕES TÉCNICAS
 

@@ -79,9 +79,10 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="clearStorange" class="col s12 m10 offset-m1 l8 offset-l2 xl8 offset-xl2" (click)="cleanStorageLastResults()">LIMPAR
-        HISTÓRICO</div>
+    <div class="row" *ngIf="lastResultsView.length > 0">
+      <div class="clearStorange" class="col s12 m10 offset-m1 l8 offset-l2 xl8 offset-xl2">
+        <div class="btn waves-effect waves-light purple darken-4" (click)="cleanStorageLastResults()">LIMPAR HISTÓRICO</div>
+      </div>
     </div>
   </div>
 </div>

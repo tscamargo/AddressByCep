@@ -1,0 +1,87 @@
+<div class="container-fluid">
+  <div class="row purple darken-3">
+    <div name="searchDiv" class=" col s10 offset-s1 m6 offset-m3 l4 offset-l4 xl4 offset-xl4 white">
+      <input type="text" name="zipCodeSearch" id="zipCodeSearch" [(ngModel)]="zipCodeSearch" minlength="9" [textMask]="{mask: maskZipCode}"
+        required placeholder="Digite aqui o CEP desejado" (keydown)="keyDownFunction($event)" /><i (click)="getLocationByCep()"
+        class="material-icons">search</i>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="addresResult">
+    <div class="col s12 m10 offset-m1 l8 offset-l2 xl8 offset-xl2">
+      <h5>Resultado para pesquisa do CEP {{addresResult.zipCode | cepMask}}:</h5>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="addresResultError">
+    <div class="col s12 m10 offset-m1 l8 offset-l2 xl8 offset-xl2">
+      <div class="card-panel red accent-4  white-text">
+        <div>
+          <i class="medium material-icons">error_outline</i>
+          <div>
+            <h5>Não encontramos registros para o cep informado.</h5>
+            <span>Confira o cep informado e tente novamente.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="addresResult">
+    <div class="col s12 m10 offset-m1 l8 offset-l2 xl8 offset-xl2">
+      <div class="card-panel"
+      [class.resultNorte]="addresResult.region=='Norte'" 
+      [class.resultSul]="addresResult.region=='Sul'" 
+      [class.resultSudeste]="addresResult.region=='Sudeste'" 
+      [class.resultCentroOeste]="addresResult.region=='Centro-Oeste'" 
+      [class.resultNordeste]="addresResult.region=='Nordeste'" >
+        <div>
+          <i class="medium material-icons">location_on</i>
+          <div>
+            <h5>{{addresResult.puiblicArea +' / '+ addresResult.neighborhood +' / '+ 
+              addresResult.city +' / '+ addresResult.state +' / Região: '+ addresResult.region}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="!addresResult && !addresResultError">
+    <div class="col s12 m10 offset-m1 l8 offset-l2 xl8 offset-xl2">
+      <h5 class="center">Faça sua pesquisa acima informando o CEP desejado.</h5>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="lastResultsView.length > 0">
+
+    <div class="col s12 m10 offset-m1 l8 offset-l2 xl8 offset-xl2">
+      <h5>Últimas pesquisas válidas:</h5>
+    </div>
+
+    <div class="row rowResult" *ngFor="let address of lastResultsView">
+      <div class="col s12 m10 offset-m1 l8 offset-l2 xl8 offset-xl2">
+        <div class="card-panel results">
+          <div class="resultBar" 
+              [class.resultNorte]="address.region=='Norte'" 
+              [class.resultSul]="address.region=='Sul'" 
+              [class.resultSudeste]="address.region=='Sudeste'" 
+              [class.resultCentroOeste]="address.region=='Centro-Oeste'" 
+              [class.resultNordeste]="address.region=='Nordeste'">
+          </div>           
+          <div>
+            <i class="medium material-icons">location_on</i>
+            <div>
+              <h5>{{address.zipCode | cepMask}}</h5>
+              <span>{{address.puiblicArea +' / '+ address.neighborhood +' / '+
+              address.city +' / '+ address.state +' / Região: '+ address.region}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="clearStorange" class="col s12 m10 offset-m1 l8 offset-l2 xl8 offset-xl2" (click)="cleanStorageLastResults()">LIMPAR
+        HISTÓRICO</div>
+    </div>
+  </div>
+</div>

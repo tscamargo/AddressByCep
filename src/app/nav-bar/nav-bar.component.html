@@ -1,0 +1,23 @@
+<div class="navbar-fixed">
+  <nav class="purple darken-4">
+    <div class="nav-wrapper">
+      <a href="" class="brand-logo">BuscaCep</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li (click)="changeRoute('about')"><a>Sobre</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-demo">
+      <div class="logoNav">
+        <div>
+          <i class="large material-icons">location_on</i>
+        </div>
+        <div>
+          <span>BuscaCep</span>
+        </div>
+      </div>
+    <li (click)="changeRoute('search')"><a>Buscar Cep</a></li>
+    <li (click)="changeRoute('about')"><a>Sobre</a></li>
+  </ul>
+</div>

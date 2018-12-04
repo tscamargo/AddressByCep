@@ -1,0 +1,90 @@
+div[name~='searchDiv']{
+
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 60px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-top: 5px;
+
+    &>input{
+
+        border-bottom: 0;
+        box-shadow: none;
+        font-size: 20px;
+        color: #4a148c;
+        width: calc(100% - 30px);
+
+        &:focus{
+            all: unset;
+            color: #4a148c;
+            font-size: 20px;
+            margin: 0 0 8px 0;
+            padding: 0;
+            box-shadow: none;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            height: 3rem;
+            width: calc(100% - 30px);
+        }
+        
+    }
+        
+    &>i{
+        color: #4a148c;
+        cursor: pointer;
+    }
+}
+div[class~='rowResult']{
+    margin-bottom: 0;
+}
+div[class~='card-panel']{
+
+    &>div{
+
+        display: flex;
+        align-content: center;
+        align-items: center;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        &>i{
+            margin-right: 10px;
+        }
+        &>div>h5{
+            margin: 0;
+        }
+    }
+
+    &.results{
+        
+        padding: 0;
+        display: flex;
+        align-content: center;
+
+        &>.resultBar{
+            width: 10px;
+        }
+    }
+}
+
+.resultNorte{
+    background-color: #A1FFAD;
+}
+.resultSul{
+    background-color: #33B7FF;
+}
+.resultSudeste{
+    background-color: #EEEEEE;
+}
+.resultCentroOeste{
+    background-color: #FFBA3D;
+}
+.resultNordeste{
+    background-color: #FFB4D5;
+}
+
+.clearStorange{
+    cursor: pointer;
+}
